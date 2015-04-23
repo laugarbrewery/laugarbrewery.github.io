@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><title>Laugar Brewery</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="laugar∫"><meta name="description" content="Laugar Brewery"><meta http-equiv="Content-Language" content="es"><meta name="revisit-after" content="1 days"><meta name="distribution" content="global"><link rel="stylesheet" href="/dependencies/tuktuk/tuktuk.css"><link rel="stylesheet" href="/dependencies/tuktuk/tuktuk.icons.css"><link rel="stylesheet" href="/static/css/app.css"></head><body class="scrolled"><script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="/dependencies/tuktuk/tuktuk.js"></script><script src="/static/js/app.debug.js"></script><header id="header" class="fixed scrolled mobile"><div class="top padding on-left"><button id="showMenu" class="icon menu show-phone"></button><a href="/" class="logo on-left"></a></div><nav class="menu padding"><a href="/beers/"><h5>Cervezas</h5></a><a href="/blog/"><h5>Blog</h5></a><a href="/map/"><h5>Planet Laugar</h5></a><a href="/aboutus/"><h5>Nosotros</h5></a></nav></header><script>(function() {
+  var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+
+  Laugar.onload(function() {
+    var mobile;
+    header.classList.remove("mobile");
+    mobile = getComputedStyle(showMenu).display !== "none";
+    header.classList.add(mobile ? "mobile" : "screen");
+    return showMenu.onclick = function() {
+      if (indexOf.call(header.classList, "menu") >= 0) {
+        return header.classList.remove("menu");
+      } else {
+        return header.classList.add("menu");
+      }
+    };
+  });
+
+}).call(this);
+</script><section class="padding-bottom"><article id="image"><div style="background-image:url(undefined)" class="background-image padding"></div></article><article class="padding-bottom"><div id="beer" class="row padding centered"></div></article></section><footer id="footer" class="bck light"><section id="beers" class="bck dark no-padding hide-phone"><a style="background-image:url('/static/images/Kizkale.jpg')" href="/beers/kizkale" class="beer"><div class="description"><h2><strong>Kis</strong>kale</h2><p>Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris</p></div><h2 class="name">Kiskale</h2></a><a style="background-image:url('/static/images/Epa.jpg')" href="/beers/epa" class="beer"><div class="description"><h2><strong>E</strong>PA</h2><p>Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris</p></div><h2 class="name">EPA</h2></a><a style="background-image:url('/static/images/Hopzale.jpg')" href="/beers/hopzale" class="beer"><div class="description"><h2><strong>Hop</strong>zale</h2><p>Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris</p></div><h2 class="name">Hopzale</h2></a><a style="background-image:url('/static/images/Kizkale.jpg')" href="/beers/kizkale" class="beer"><div class="description"><h2><strong>Kis</strong>kale</h2><p>Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris</p></div><h2 class="name">Kiskale</h2></a><a style="background-image:url('/static/images/Epa.jpg')" href="/beers/epa" class="beer"><div class="description"><h2><strong>E</strong>PA</h2><p>Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris</p></div><h2 class="name">EPA</h2></a></section><section id="info" class="bck color padding"><div class="row"><div class="column_2 padding"><h5 class="text bold">Dónde estámos</h5><br><p>Zubiete Auzoa, 42</p><p>48192 Gordexola</p><p>Bizkaia</p><p>Spain</p></div><div class="column_3 padding divright"><h5 class="text bold">Contacto</h5><br><p>Departamento comercial:  </p><p>(0034) 675 141 372</p><br><p>Microcervecería: </p><p>(0034) 628 069 653</p><p>(0034) 692 710 263   </p></div><div class="column_2 padding"><h5 class="text bold">Mapa web</h5><br><p><a href="/beers">Cervezas</a></p><p><a href="/blog">Blog</a></p><p><a href="/map">Planet Laugar</a></p><p><a href="/aboutus">Nosotros</a></p></div><div class="column_4 padding"><h4 class="text bold">Síguenos</h4><br><a href="https://twitter.com/laugarbrewery" target="_blank" class="icon twitter padding-right text large"></a><a href="https://facebook.com/laugarbrewery" target="_blank" class="icon facebook padding text large"></a><a href="https://plus.google.com/100568353063153710470" target="_blank" class="icon google-plus padding text large"></a><a href="mailto:info@laugarbrewery.com" target="_blank" class="icon envelope-alt padding text large"></a></div></div><div class="row"><div class="uhurus padding"><p>©2015 Laugar Brewery. All Rights Reserved, made with <span class="icon coffee"> </span>  by  <a href="http://uhurus.com" target="_blank">uhurus</a></p></div></div></section></footer><script src="//localhost:35729/livereload.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51971292-1', 'laugarbrewery.com');
+ga('send', 'pageview');</script><script>(function() {
+  Laugar.onload(function() {
+    return image.style.height = ((document.body.offsetHeight - header.offsetHeight) / 2) + "px";
+  });
+
+}).call(this);
+</script></body></html>
