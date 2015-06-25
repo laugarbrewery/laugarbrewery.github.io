@@ -1328,8 +1328,8 @@ article a:hover {
 .title-widget {
   text-align: center;
   width: 100%;
-  position: absolute;
   height: 30%;
+  padding: 1em 0 5em;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1400,9 +1400,6 @@ footer .uhurus a:hover {
 }
 .no-margin-bottom {
   margin-bottom: 0 !important;
-}
-.padding {
-  padding: 1em !important;
 }
 .no-padding {
   padding: 0 !important;
