@@ -1,11 +1,11 @@
-<!DOCTYPE html><html><head><title>Laugar Brewery</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="laugar∫"><meta name="description" content="Laugar Brewery"><meta http-equiv="Content-Language" content="es"><meta name="revisit-after" content="1 days"><meta name="distribution" content="global"><link rel="stylesheet" href="/dependencies/tuktuk/tuktuk.css"><link rel="stylesheet" href="/dependencies/tuktuk/tuktuk.icons.css"><link rel="stylesheet" href="/static/css/app.css"></head><body class="scrolled"><script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="/dependencies/tuktuk/tuktuk.js"></script><script src="/static/js/app.debug.js"></script><header id="header" class="fixed scrolled mobile"><div class="top padding on-left"><button id="showMenu" class="show-phone"></button><a href="/" class="logo on-left">   </a></div></header><script>(function() {
+<!DOCTYPE html><html><head><title>Laugar Brewery</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="laugar∫"><meta name="description" content="Laugar Brewery"><meta http-equiv="Content-Language" content="es"><meta name="revisit-after" content="1 days"><meta name="distribution" content="global"><link rel="stylesheet" href="/dependencies/tuktuk/tuktuk.css"><link rel="stylesheet" href="/dependencies/tuktuk/tuktuk.icons.css"><link rel="stylesheet" href="/static/css/app.css"></head><body class="scrolled"><script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="/dependencies/tuktuk/tuktuk.js"></script><script src="/dependencies/tabletop/src/tabletop.js"></script><script src="/static/js/app.debug.js"></script><header id="header" class="fixed scrolled mobile"><div class="top padding on-left"><button id="showMenu" class="icon menu show-phone"></button><a href="/" class="logo on-left"></a></div><nav class="menu padding"><a href="/beers/"><h5>Cervezas</h5></a><a href="/map/"><h5>Planet Laugar</h5></a><a href="/visit/"><h5>Visítanos</h5></a><a href="/aboutus/"><h5>Nosotros</h5></a></nav></header><script>(function() {
   var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   Laugar.onload(function() {
-    var mobile;
     header.classList.remove("mobile");
-    mobile = getComputedStyle(showMenu).display !== "none";
-    header.classList.add(mobile ? "mobile" : "screen");
+    Laugar.mobile = getComputedStyle(showMenu).display !== "none";
+    header.classList.add(Laugar.mobile ? "mobile" : "screen");
+    document.body.classList.add(Laugar.mobile ? "mobile" : "screen");
     return showMenu.onclick = function() {
       if (indexOf.call(header.classList, "menu") >= 0) {
         return header.classList.remove("menu");
@@ -16,78 +16,48 @@
   });
 
 }).call(this);
-</script><section id="landing" class="padding"><div id="logo" class="row"><article class="column_4 offset_4 text center margin-bottom"><img src="/static/images/logo-laugar-invertido.png" class="responsive"><h1 class="color white hide-phone">brewery</h1><h1 class="color white hide-screen hide-tablet">brewery</h1></article></div></section><section class="bck white padding"><div class="row"><div class="column_12 padding text center margin-bottom"><h1>Porque las reglas están hechas para <b class="color theme">romperlas</b>... </h1><br><h1 id="counter"> <span><span class="time days">30</span> días </span><span><span class="time hours">2</span> horas </span><span><span class="time minutes">30</span> minutos </span><span><span class="time seconds">15</span> segundos</span></h1></div></div></section><footer id="footer" class="bck light"><section id="info" class="bck color padding"><div class="row"><div class="column_3 offset_1 padding"><h5 class="text bold">Dónde estámos</h5><br><p>Zubiete Auzoa, 42</p><p>48192 Gordexola</p><p>Bizkaia</p><p>Spain</p><a href="https://www.google.com/maps/place/Laugar+Brewery+S.L./@43.18389,-3.061561,338m/data=!3m1!1e3!4m2!3m1!1s0x0:0x3799684a50591cac?hl=en" target="_blank">Mapa</a></div><div class="column_3 offset_1 padding divright"><h5 class="text bold">Contacto</h5><br><p>Departamento comercial:  </p><p>(0034) 675 141 372</p><br><p>Microcervecería: </p><p>(0034) 628 069 653</p><p>(0034) 692 710 263   </p></div><div class="column_3 offset_1 padding"><h4 class="text bold">Síguenos</h4><br><a href="https://twitter.com/laugarbrewery" target="_blank" class="icon twitter padding-right text large"></a><a href="https://facebook.com/laugarbrewery" target="_blank" class="icon facebook padding text large"></a><a href="https://plus.google.com/100568353063153710470" target="_blank" class="icon google-plus padding text large"></a><a href="mailto:info@laugarbrewery.com" target="_blank" class="icon envelope-alt padding text large"></a></div></div><div class="row"><div class="uhurus padding"><p>©2015 Laugar Brewery. All Rights Reserved, made with &nbsp;<span class="icon coffee"> </span>&nbsp;by &nbsp;<a href="http://uhurus.com" target="_blank">uhurus</a></p></div></div></section></footer><script src="//localhost:35729/livereload.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+</script><!--section#landing(style="background-image:url('/static/images/foto-fabrica.jpg');height:100%").background-image--><section id="landing" style="background:black;height:100%" class="background-image"><div style="overflow-y:hidden"><!--iframe#hero(src="https://www.youtube.com/embed/dc3ADo7Nk-M?start=8&autoplay=0&modestbranding=1&controls=0&showinfo=0&rel=0&version=3&allowfullscreen=true&wmode=transparent&iv_load_policy=3&html5=1&loop=1&enablejsapi=1",frameborder="0").hide-phone--></div><div class="pattern"></div><div id="logo" class="row"><article class="column_4 offset_4 text center"><img src="/static/images/logo-laugar-invertido.png" class="responsive"><h1 class="color white hide-phone">brewery</h1><h1 class="color white hide-screen hide-tablet">brewery</h1></article></div></section><section class="bck white padding"><div class="row"><div class="column_10 offset_1 padding text center"><h1>Cerveza artesana hecha en <b class="color theme">Gordexola</b></h1></div></div></section><footer id="footer" class="bck light"><section class="bck dark no-padding"><div id="slider"><button data-dir="prev" class="nav"><</button><ul class="slides">           <li><a style="background-image:url('/static/images/tag-epa.jpg')" href="/beers/epa" class="beer"><div class="description"><h2><strong>E</strong>PA!</h2><p>American Pale Ale</p><p>5,2%ABV</p><p>40 IBU</p></div><h2 class="name">EPA!</h2></a></li><li><a style="background-image:url('/static/images/tag-kiskale.jpg')" href="/beers/kiskale" class="beer"><div class="description"><h2><strong>Kis</strong>kale</h2><p>Brown Ale</p><p>7,3%ABV</p><p>30 IBU</p></div><h2 class="name">Kiskale</h2></a></li><li><a style="background-image:url('/static/images/tag-fibonatxi.jpg')" href="/beers/fibonatxi" class="beer"><div class="description"><h2><strong>Fibo</strong>natxi 0</h2><p>Ginger saison</p><p>4,9%ABV</p><p>15 IBU</p></div><h2 class="name">Fibonatxi 0</h2></a></li><li><a style="background-image:url('/static/images/tag-patxi-hopman.jpg')" href="/beers/patxi-hopman" class="beer"><div class="description"><h2><strong>Patxi</strong> Hopman</h2><p>IPA</p><p>6,8%ABV</p><p>75 IBU</p></div><h2 class="name">Patxi Hopman</h2></a></li><li><a style="background-image:url('/static/images/tag-hopzale.jpg')" href="/beers/hopzale" class="beer"><div class="description"><h2><strong>Hop</strong>zale</h2><p>Doble IPA</p><p>9,2%ABV</p><p>100 IBU</p></div><h2 class="name">Hopzale</h2></a></li><li><a style="background-image:url('/static/images/tag-hop-shock.jpg')" href="/beers/hop-shock" class="beer"><div class="description"><h2><strong>Hop</strong> Shock</h2><p>Californian Pale Ale</p><p>3,5%ABV</p><p>50 IBU</p></div><h2 class="name">Hop Shock</h2></a></li><li><a style="background-image:url('/static/images/tag-aupa-tovarisch.jpg')" href="/beers/aupa-tovarisch" class="beer"><div class="description"><h2><strong>Aupa</strong> Tovarisch</h2><p>Russian Imperial Stout</p><p>11,3%ABV</p><p>40 IBU</p></div><h2 class="name">Aupa Tovarisch</h2></a></li></ul><button data-dir="next" class="nav">></button></div></section><section id="info" class="bck color padding"><div class="row"><div class="column_3 padding"><h5 class="text bold">Dónde estámos</h5><br><p>Zubiete Auzoa, 42</p><p>48192 Gordexola</p><p>Bizkaia</p><p>Spain</p></div><div class="column_3 padding"><h5 class="text bold">Contacto</h5><br><p>Departamento comercial:  </p><p>(0034) 675 141 372</p><br><p>Microcervecería: </p><p>(0034) 628 069 653</p><p>(0034) 692 710 263</p></div><div class="column_3 padding"><h5 class="text bold">Mapa web</h5><br><p><a href="/beers">Cervezas</a></p><p><a href="/map">Planet Laugar</a></p><p><a href="/visit">Visítanos</a></p><p><a href="/aboutus">Nosotros</a></p></div><div class="column_3 padding"><h4 class="text bold">Síguenos</h4><br><a href="https://twitter.com/laugarbrewery" target="_blank" class="icon twitter padding-right text large"></a><a href="https://facebook.com/laugarbrewery" target="_blank" class="icon facebook padding text large"></a><a href="https://plus.google.com/100568353063153710470" target="_blank" class="icon google-plus padding text large"></a><a href="mailto:info@laugarbrewery.com" target="_blank" class="icon envelope-alt padding text large"></a></div></div><div class="row"><div class="uhurus padding">         <p>©2015 Laugar Brewery. All Rights Reserved, made with&nbsp;&nbsp;<span class="icon coffee"></span>&nbsp;&nbsp;by&nbsp;&nbsp;<a href="http://uhurus.com" target="_blank">uhurus</a></p></div></div></section><section class="bck color hide-phone"><img src="/static/images/footer-end.png" style="width:25%"><img src="/static/images/footer-end.png" style="width:25%"><img src="/static/images/footer-end.png" style="width:25%"><img src="/static/images/footer-end.png" style="width:25%"></section><section class="show-phone bck color"><img src="/static/images/footer-end.png" style="width:100%"></section></footer><script>(function() {
+  Laugar.onload(function() {
+    var buttonClicked, slideWidth, slides;
+    if (typeof slider === "undefined" || slider === null) {
+      return;
+    }
+    slides = slider.children[1];
+    slideWidth = slides.children[1].offsetWidth;
+    buttonClicked = function(event) {
+      var button, direction, newScroll;
+      button = event.target;
+      direction = button.attributes["data-dir"].value;
+      newScroll = direction === "next" ? slides.scrollLeft + slideWidth : slides.scrollLeft - slideWidth;
+      return $(slides).stop().animate({
+        scrollLeft: newScroll
+      }, 500);
+    };
+    slider.children[0].onclick = buttonClicked;
+    return slider.children[2].onclick = buttonClicked;
+  });
+
+}).call(this);
+</script><script src="//localhost:35729/livereload.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-51971292-1', 'laugarbrewery.com');
 ga('send', 'pageview');</script><script> (function() {
-  var counter, measures, putTimeout, requestUpdate, time, updateTime, updateTimeItem;
-
-  measures = {
-    second: 1000,
-    minute: 1000 * 60,
-    hour: 1000 * 60 * 60,
-    day: 1000 * 60 * 60 * 24
-  };
-
-  time = {};
-
-  counter = {};
-
-  updateTime = function() {
-    var days, diff, hours, mins, secs;
-    diff = new Date(2015, 5, 15).getTime() - new Date().getTime();
-    days = Math.floor(diff / measures.day);
-    diff = diff - days * measures.day;
-    hours = Math.floor(diff / measures.hour);
-    diff = diff - hours * measures.hour;
-    mins = Math.floor(diff / measures.minute);
-    diff = diff - mins * measures.minute;
-    secs = Math.floor(diff / measures.second);
-    if (Number(time.days.text()) !== days) {
-      updateTimeItem(time.days, days);
-    }
-    if (Number(time.hours.text()) !== hours) {
-      updateTimeItem(time.hours, hours);
-    }
-    if (Number(time.mins.text()) !== mins) {
-      updateTimeItem(time.mins, mins);
-    }
-    if (Number(time.secs.text()) !== secs) {
-      return updateTimeItem(time.secs, secs);
-    }
-  };
-
-  updateTimeItem = function(item, newValue) {
-    item.addClass("active");
-    putTimeout(100, function() {
-      return item.text(newValue);
-    });
-    return putTimeout(200, function() {
-      return item.removeClass("active");
-    });
-  };
-
-  requestUpdate = function() {
-    updateTime();
-    return setTimeout(requestUpdate, 1000);
-  };
-
-  putTimeout = function(time, fn) {
-    return setTimeout(fn, time);
-  };
-
   $(function() {
-    counter = $("#counter");
-    time = {
-      days: counter.find(".days"),
-      hours: counter.find(".hours"),
-      mins: counter.find(".minutes"),
-      secs: counter.find(".seconds")
-    };
-    return requestUpdate();
+    var $doc, $header;
+    $("body").removeClass("scrolled");
+    $doc = $(document);
+    $header = $("#header");
+    $header.removeClass("scrolled");
+    return $doc.on("scroll", function() {
+      if ($doc.scrollTop() < document.body.offsetHeight / 2) {
+        return $header.removeClass("scrolled");
+      } else {
+        return $header.addClass("scrolled");
+      }
+    });
   });
 
 }).call(this);

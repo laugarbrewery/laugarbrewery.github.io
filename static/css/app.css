@@ -8,70 +8,79 @@
   position: relative;
 }
 #aboutus #people .person {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  z-index: 10;
+  text-align: center;
   -webkit-transition: all 200ms ease;
   -moz-transition: all 200ms ease;
   -ms-transition: all 200ms ease;
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
-  height: 100%;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -ms-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
-  margin-bottom: 3.5em;
 }
-#aboutus #people .person h3 {
-  margin-top: 90%;
+#aboutus #people .person div {
+  height: 75%;
+  width: 75%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
 }
-#aboutus #people .person.eneko {
-  background-image: url("https://blog.uber.com/wp-content/uploads/2014/07/person-icon.png");
+#aboutus #people .person.eneko div {
+  background-image: url("/static/images/aboutus-eneko-1.jpg");
 }
-#aboutus #people .person.eneko:hover {
-  background-image: url("http://fc03.deviantart.net/fs70/f/2013/132/d/6/069__bellsprout_by_mabelma-d6527j1.png");
+#aboutus #people .person.eneko:hover div {
+  background-image: url("/static/images/aboutus-eneko-2.jpg");
 }
-#aboutus #people .person.txus {
-  background-image: url("https://blog.uber.com/wp-content/uploads/2014/07/person-icon.png");
+#aboutus #people .person.txus div {
+  background-image: url("/static/images/aboutus-txus-1.jpg");
 }
-#aboutus #people .person.txus:hover {
-  background-image: url("http://fc03.deviantart.net/fs70/f/2013/132/d/6/069__bellsprout_by_mabelma-d6527j1.png");
+#aboutus #people .person.txus:hover div {
+  background-image: url("/static/images/aboutus-txus-2.jpg");
 }
-#aboutus #people .person.sergio {
-  background-image: url("https://blog.uber.com/wp-content/uploads/2014/07/person-icon.png");
+#aboutus #people .person.sergio div {
+  background-image: url("/static/images/aboutus-sergio-1.jpg");
 }
-#aboutus #people .person.sergio:hover {
-  background-image: url("http://fc03.deviantart.net/fs70/f/2013/132/d/6/069__bellsprout_by_mabelma-d6527j1.png");
+#aboutus #people .person.sergio:hover div {
+  background-image: url("/static/images/aboutus-sergio-2.jpg");
 }
-#aboutus #people .person.aingeru {
-  background-image: url("https://blog.uber.com/wp-content/uploads/2014/07/person-icon.png");
+#aboutus #people .person.aingeru div {
+  background-image: url("/static/images/aboutus-aingeru-1.jpg");
 }
-#aboutus #people .person.aingeru:hover {
-  background-image: url("http://fc03.deviantart.net/fs70/f/2013/132/d/6/069__bellsprout_by_mabelma-d6527j1.png");
+#aboutus #people .person.aingeru:hover div {
+  background-image: url("/static/images/aboutus-aingeru-2.jpg");
 }
-#aboutus #people .person.patxi {
-  background-image: url("https://blog.uber.com/wp-content/uploads/2014/07/person-icon.png");
+#aboutus #people .person.eder div {
+  background-image: url("/static/images/aboutus-eder-1.jpg");
 }
-#aboutus #people .person.patxi:hover {
-  background-image: url("http://fc03.deviantart.net/fs70/f/2013/132/d/6/069__bellsprout_by_mabelma-d6527j1.png");
+#aboutus #people .person.eder:hover div {
+  background-image: url("/static/images/aboutus-eder-2.jpg");
 }
 
 [data-tuktuk=accordion] {
   list-style: none;
 }
 
-#image .background-image {
+.screen #beer-detail {
+  height: 100%;
+}
+.screen #beer-detail .description {
+  position: absolute;
+  top: 7em;
+  right: 1em;
+  width: 30%;
+  background-color: rgba(255,255,255,0.75);
+  -webkit-box-shadow: 0 1px 3px #444;
+  -moz-box-shadow: 0 1px 3px #444;
+  -ms-box-shadow: 0 1px 3px #444;
+  -o-box-shadow: 0 1px 3px #444;
+  box-shadow: 0 1px 3px #444;
+}
+#beer-detail .image {
+  height: 100%;
+}
+#beer-detail .image .background-image {
   height: 100%;
   width: 100%;
   background-position: center 75%;
-}
-#beer {
-  background: #fff;
 }
 
 #beers .beer {
@@ -80,13 +89,13 @@
   -ms-transition: all 200ms;
   -o-transition: all 200ms;
   transition: all 200ms;
-  height: 30em;
-  -webkit-background-size: 250%;
-  -moz-background-size: 250%;
-  -ms-background-size: 250%;
-  -o-background-size: 250%;
-  background-size: 250%;
-  background-position: 50%;
+  height: 15em;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -ms-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  background-position-y: 20%;
   float: left;
   background-repeat: no-repeat;
   position: relative;
@@ -105,7 +114,7 @@
   width: 100%;
 }
 #beers .beer .description {
-  padding: 14em 1em 1em;
+  padding: 5em 1em 1em;
   -webkit-transition: all 200ms;
   -moz-transition: all 200ms;
   -ms-transition: all 200ms;
@@ -131,11 +140,11 @@
 }
 #beers .beer:hover,
 #beers .beer.active {
-  -webkit-background-size: 300%;
-  -moz-background-size: 300%;
-  -ms-background-size: 300%;
-  -o-background-size: 300%;
-  background-size: 300%;
+  -webkit-background-size: 150%;
+  -moz-background-size: 150%;
+  -ms-background-size: 150%;
+  -o-background-size: 150%;
+  background-size: 150%;
 }
 #beers .beer:hover h2.name,
 #beers .beer.active h2.name {
@@ -294,26 +303,70 @@ button .icon {
 #footer {
   background: #fff;
 }
-#footer #beers .beer {
+#slider {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+#slider .nav {
+  position: absolute;
+  font-size: xx-large;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  z-index: 100;
+  height: 100%;
+  top: 0;
+}
+#slider .nav[data-dir="prev"] {
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(left, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(left, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(left, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+  left: 0;
+}
+#slider .nav[data-dir="next"] {
+  background: -webkit-linear-gradient(right, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+  background: -moz-linear-gradient(right, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(right, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(right, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(right, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+  right: 0;
+}
+#slider .slides {
+  white-space: nowrap;
+  overflow-x: hidden;
+  margin: auto;
+}
+#slider .slides li {
+  white-space: initial;
+  display: inline-block;
+  width: 35%;
+}
+#slider .slides li img {
+  width: 100%;
+  height: 70%;
+}
+#slider .slides li .beer {
   overflow-y: hidden;
   -webkit-transition: all 200ms;
   -moz-transition: all 200ms;
   -ms-transition: all 200ms;
   -o-transition: all 200ms;
   transition: all 200ms;
-  height: 30em;
-  width: 20%;
-  -webkit-background-size: 250%;
-  -moz-background-size: 250%;
-  -ms-background-size: 250%;
-  -o-background-size: 250%;
-  background-size: 250%;
-  background-position: 50%;
+  width: 100%;
+  height: 20em;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -ms-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  background-position-y: 10%;
   float: left;
   background-repeat: no-repeat;
   position: relative;
 }
-#footer #beers .beer h2.name {
+#slider .slides li .beer h2.name {
   -webkit-transition: all 200ms;
   -moz-transition: all 200ms;
   -ms-transition: all 200ms;
@@ -321,13 +374,13 @@ button .icon {
   transition: all 200ms;
   color: #fff;
   background-color: rgba(0,0,0,0.4);
-  padding: 0.5em;
+  padding: 0.5em 1.5em;
   bottom: 0;
   position: absolute;
   width: 100%;
 }
-#footer #beers .beer .description {
-  padding: 14em 1em 1em;
+#slider .slides li .beer .description {
+  padding: 9em 2.5em 1em;
   -webkit-transition: all 200ms;
   -moz-transition: all 200ms;
   -ms-transition: all 200ms;
@@ -339,7 +392,7 @@ button .icon {
   height: 100%;
   background-color: rgba(255,255,255,0.75);
 }
-#footer #beers .beer .description h2 {
+#slider .slides li .beer .description h2 {
   -webkit-transition: all 200ms;
   -moz-transition: all 200ms;
   -ms-transition: all 200ms;
@@ -348,24 +401,28 @@ button .icon {
   margin-top: 25%;
   color: #000;
 }
-#footer #beers .beer .description h2 strong {
+#slider .slides li .beer .description h2 strong {
   color: #db2c23;
 }
-#footer #beers .beer:hover {
-  -webkit-background-size: 300%;
-  -moz-background-size: 300%;
-  -ms-background-size: 300%;
-  -o-background-size: 300%;
-  background-size: 300%;
+#slider .slides li .beer:hover {
+  -webkit-background-size: 150%;
+  -moz-background-size: 150%;
+  -ms-background-size: 150%;
+  -o-background-size: 150%;
+  background-size: 150%;
 }
-#footer #beers .beer:hover h2.name {
+#slider .slides li .beer:hover h2.name {
   opacity: 0;
 }
-#footer #beers .beer:hover .description {
+#slider .slides li .beer:hover .description {
   opacity: 1;
 }
-#footer #beers .beer:hover .description h2 {
+#slider .slides li .beer:hover .description h2 {
   margin-top: 0;
+}
+.mobile #slider .slides li {
+  width: 100%;
+  height: 100%;
 }
 
 form input[type="text"],
@@ -392,9 +449,10 @@ form select,
 .form select,
 form textarea,
 .form textarea {
-  background-color: #fff;
+  background-color: #fff !important;
   color: #000;
-  border: 1px solid #dce4ec;
+  border: 0px solid #dce4ec;
+  border-bottom: 2px solid #000;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
@@ -406,6 +464,7 @@ form textarea,
   -o-transition: border-color 200ms;
   transition: border-color 200ms;
   background-color: #f1f4f7;
+  font-size: 1.3em !important;
 }
 form input[type="text"].error,
 .form input[type="text"].error,
@@ -534,12 +593,17 @@ form select:focus,
 .form select:focus,
 form textarea:focus,
 .form textarea:focus {
-  border-color: #92abc4;
+  border-color: #db2c23;
   background-color: #f6f8fa;
+  color: #000;
 }
 form .select:after,
 .form .select:after {
   color: #dce4ec;
+}
+form select option:first,
+.form select option:first {
+  color: #999;
 }
 form input[type="checkbox"],
 .form input[type="checkbox"],
@@ -571,6 +635,8 @@ form input[type="checkbox"],
 form label,
 .form label {
   font-weight: bold;
+  margin-left: 1em;
+  margin-top: 5em;
 }
 [data-control="checkbox"] {
   background: #b8b8b8;
@@ -610,7 +676,7 @@ form label,
   height: 5em !important;
 }
 #header .logo {
-  background-image: url("/static/images/logo-laugar.png");
+  background-image: url("/static/images/logo-laugar-small.png");
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;
   -ms-transition: all 400ms ease;
@@ -656,6 +722,10 @@ form label,
 }
 #header.screen.scrolled {
   background: rgba(255,255,255,0.75);
+}
+#header.mobile:not(.menu) nav {
+  width: 0;
+  height: 0;
 }
 #header.mobile .top {
   width: 100%;
@@ -730,16 +800,23 @@ body.scrolled > section:first-of-type {
 body {
   overflow-x: hidden;
 }
-#landing {
-  background: #000;
+#landing iframe {
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  opacity: 1;
 }
 #landing #logo {
+  position: absolute;
+  overflow: inherit;
   margin: 0 auto;
   left: 0;
   right: 0;
 }
 #landing #logo article {
-  margin-top: 5%;
+  margin-top: 15%;
 }
 #landing #logo h1 {
   margin-top: -0.6em;
@@ -750,24 +827,6 @@ body {
 }
 #landing #logo h1.hide-screen.hide-tablet {
   font-size: 4.5em;
-}
-#counter {
-  font-size: 3em;
-}
-#counter .time {
-  color: #db2c23;
-  -webkit-transition: all 200ms;
-  -moz-transition: all 200ms;
-  -ms-transition: all 200ms;
-  -o-transition: all 200ms;
-  transition: all 200ms;
-}
-#counter .time.active {
-  -webkit-transform: rotateX(30deg);
-  -moz-transform: rotateX(30deg);
-  -ms-transform: rotateX(30deg);
-  -o-transform: rotateX(30deg);
-  transform: rotateX(30deg);
 }
 
 body {
@@ -901,6 +960,9 @@ body :not(.icon).tag {
   -ms-box-shadow: 0 1px 3px #444;
   -o-box-shadow: 0 1px 3px #444;
   box-shadow: 0 1px 3px #444;
+}
+#main p {
+  padding: 0.8em;
 }
 
 [data-tuktuk="modal"] {
@@ -1236,6 +1298,59 @@ table tbody td span.icon.caution {
   transform: translateX(8px);
 }
 
+#visits select[name=hour] {
+  max-width: 5em;
+}
+#visits select[name=day] {
+  margin-left: 1em;
+  max-width: 4em;
+}
+#visits select[name=month] {
+  margin-left: 1em;
+  max-width: 8em;
+}
+#visits select[name=people] {
+  margin-left: 1em;
+  max-width: 7em;
+}
+
+article a {
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+  border-bottom: 1px solid;
+}
+article a:hover {
+  color: #db2c23;
+}
+.title-widget {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  height: 30%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.title-widget h2 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1em;
+  background: rgba(255,255,255,0.75);
+  padding: 0.5em;
+  display: table;
+  -webkit-box-shadow: 0 1px 3px #444;
+  -moz-box-shadow: 0 1px 3px #444;
+  -ms-box-shadow: 0 1px 3px #444;
+  -o-box-shadow: 0 1px 3px #444;
+  box-shadow: 0 1px 3px #444;
+}
 .background-image {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -1260,6 +1375,16 @@ footer .uhurus {
 }
 footer .uhurus a {
   color: #00a362 !important;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+  padding-bottom: 0.5em;
+}
+footer .uhurus a:hover {
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid;
 }
 .no-margin {
   margin: 0 !important;
