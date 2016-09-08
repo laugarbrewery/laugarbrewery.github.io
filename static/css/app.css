@@ -694,8 +694,10 @@ form label,
   -o-transition: all 200ms;
   transition: all 200ms;
 }
-#header .menu {
+#header nav a {
   color: #fff;
+}
+#header nav.menu {
   font-weight: bold;
 }
 #header.screen .menu {
@@ -722,6 +724,10 @@ form label,
 #header.screen .menu a.active {
   padding-bottom: 0.666666666666667em;
   border-bottom: 5px solid #db2c23;
+}
+#header.screen .menu.languages a:hover {
+  color: #db2c23;
+  border-bottom: none;
 }
 #header.screen.scrolled {
   background: rgba(255,255,255,0.75);
@@ -781,12 +787,12 @@ form label,
   -o-background-size: cover;
   background-size: cover;
 }
-#header.scrolled .menu,
-#header.menu .menu {
+#header.scrolled nav,
+#header.menu nav {
   color: #000;
 }
-#header.scrolled .menu a,
-#header.menu .menu a {
+#header.scrolled nav a,
+#header.menu nav a {
   color: #000 !important;
 }
 #header.scrolled #showMenu,

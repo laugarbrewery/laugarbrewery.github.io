@@ -1,0 +1,80 @@
+<!DOCTYPE html><html><head><title>Laugar Brewery</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="laugar∫"><meta name="description" content="Laugar Brewery"><meta http-equiv="Content-Language" content="es"><meta name="revisit-after" content="1 days"><meta name="distribution" content="global"><link rel="stylesheet" href="/dependencies/tuktuk/tuktuk.css"><link rel="stylesheet" href="/static/css/app.css"><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"></head><body class="scrolled"><script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="/dependencies/tuktuk/tuktuk.js"></script><script src="/dependencies/tabletop/src/tabletop.js"></script><script src="/static/js/app.debug.js"></script><header id="header" class="fixed scrolled mobile"><div class="top padding on-left"><button id="showMenu" class="fa fa-bars show-phone"></button><a href="/en/" class="logo on-left"></a></div><nav class="menu padding"><a href="/en/beers/"><h5>Beers</h5></a><a href="/en/map/" class="active"><h5>Planet Laugar</h5></a><a href="/en/visit/"><h5>Visit us</h5></a><a href="/en/aboutus/"><h5>About us</h5></a></nav><nav class="menu languages padding on-right no-padding-right"><a href="/map"><h7>es</h7></a><a href="/en/map"><h7>en</h7></a></nav></header><script>(function() {
+  var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+
+  Laugar.onload(function() {
+    header.classList.remove("mobile");
+    Laugar.mobile = getComputedStyle(showMenu).display !== "none";
+    header.classList.add(Laugar.mobile ? "mobile" : "screen");
+    document.body.classList.add(Laugar.mobile ? "mobile" : "screen");
+    return showMenu.onclick = function() {
+      if (indexOf.call(header.classList, "menu") >= 0) {
+        return header.classList.remove("menu");
+      } else {
+        return header.classList.add("menu");
+      }
+    };
+  });
+
+}).call(this);
+</script><section id="main"><article style="z-index:1" class="absolute text center full-width hide-phone"><h2 class="centered margin-top">Where to find Laugar?</h2></article><div id="LBMap"></div></section><footer id="footer" class="bck light"><section id="info" class="bck color padding"><div class="row"><div class="column_3 padding"><h5 class="text bold">Location</h5><br><p>Zubiete Auzoa, 42</p><p>48192 Gordexola</p><p>Bizkaia</p><p>Spain</p></div><div class="column_3 padding"><h5 class="text bold">Contact</h5><br><p>Commercial department:</p><p>(0034) 675 141 372</p><br><p>Microbrewery:</p><p>(0034) 946 798 292</p><p>(0034) 666 825 752</p></div><div class="column_3 padding"><h5 class="text bold">Sitemap</h5><br><p><a href="/en/beers/">Beers</a></p><p><a href="/en/map/">Planet Laugar</a></p><p><a href="/en/visit/">Visit us</a></p><p><a href="/en/aboutus/">About us</a></p></div><div class="column_3 padding"><h4 class="text bold">Follow</h4><br><a href="https://twitter.com/laugarbrewery" target="_blank" class="fa fa-twitter text large padding-right"></a><a href="https://facebook.com/laugarbrewery" target="_blank" class="fa fa-facebook text large padding-right"></a><a href="https://plus.google.com/100568353063153710470" target="_blank" class="fa fa-google-plus text large padding-right"></a><a href="https://instagram.com/laugarbrewery" target="_blank" class="fa fa-instagram text large padding-right"></a><a href="mailto:info@laugarbrewery.com" target="_blank" class="fa fa-envelope text large padding-right"></a></div></div><div class="row"><div class="uhurus padding">         <p>©2015 Laugar Brewery. All Rights Reserved, made with&nbsp;&nbsp;<span class="fa fa-coffee"></span>&nbsp;&nbsp;by&nbsp;&nbsp;<a href="http://uhurus.com" target="_blank">uhurus</a></p></div></div></section><section class="bck color hide-phone"><img src="/static/images/footer-end.png" style="width:25%"><img src="/static/images/footer-end.png" style="width:25%"><img src="/static/images/footer-end.png" style="width:25%"><img src="/static/images/footer-end.png" style="width:25%"></section><section class="show-phone bck color"><img src="/static/images/footer-end.png" style="width:100%"></section></footer><script>(function() {
+  Laugar.onload(function() {
+    var buttonClicked, slideWidth, slides;
+    if (typeof slider === "undefined" || slider === null) {
+      return;
+    }
+    slides = slider.children[1];
+    slideWidth = slides.children[1].offsetWidth;
+    buttonClicked = function(event) {
+      var button, direction, newScroll;
+      button = event.target;
+      direction = button.attributes["data-dir"].value;
+      newScroll = direction === "next" ? slides.scrollLeft + slideWidth : slides.scrollLeft - slideWidth;
+      return $(slides).stop().animate({
+        scrollLeft: newScroll
+      }, 500);
+    };
+    slider.children[0].onclick = buttonClicked;
+    return slider.children[2].onclick = buttonClicked;
+  });
+
+}).call(this);
+</script><script>(function() {
+  var gmap;
+
+  gmap = null;
+
+  Laugar.onload(function() {
+    var height;
+    height = document.body.offsetHeight - header.offsetHeight;
+    return LBMap.style.height = height + "px";
+  });
+
+  window.initialize = function() {
+    var height, laugarll, mapOptions, marker;
+    mapOptions = {
+      zoom: 10,
+      center: new google.maps.LatLng(43.182693, -3.061776),
+      scrollwheel: false
+    };
+    gmap = new google.maps.Map(window.map, mapOptions);
+    height = document.body.offsetHeight - header.offsetHeight;
+    gmap.getDiv().style.height = height + "px";
+    laugarll = new google.maps.LatLng(43.18389, -3.061561);
+    return marker = new google.maps.Marker({
+      position: laugarll,
+      map: gmap,
+      title: "¡Laugar!"
+    });
+  };
+
+}).call(this);
+</script><script>(function(d,a,t,b,lt,lg){LBMO =
+{target:a,token:t,business:b,lat:lt,lng:lg};h=d.getElementsByTagName('head')[0];l=d.createElement('link');l.rel='stylesheet';l.href='https://localbier.com/css/embed.css';h.appendChild(l);s=d.createElement('script');s.src="https://localbier.com/js/embed.js?auts";h.appendChild(s);
+})(document, "LBMap", "5a04b8aba05e97c43e71396cae484b54", "204")
+</script><!--script(async, type="text/javascript",src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&callback=initialize")--><script src="//localhost:35729/livereload.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51971292-1', 'laugarbrewery.com');
+ga('send', 'pageview');</script></body></html>
